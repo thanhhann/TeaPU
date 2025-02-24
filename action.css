@@ -140,6 +140,11 @@ body {
     margin-top: 50px;
 }
 
+.video-container {
+    margin-top: 20px;
+    text-align: center;
+}
+
 footer {
     text-align: center;
     padding: 15px;
