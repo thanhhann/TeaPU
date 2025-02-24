@@ -25,6 +25,26 @@
         <p class="chao">Chào mừng các bạn đến với TeaPU, một trang web được lập ra với sứ mệnh giúp cho môi trường của chúng ta trở nên xanh hơn!</p>        
     </div>
     
+    <div class="form">
+        <h3>Bạn có sáng kiến gì để bảo vệ môi trường không? Hãy cho chúng mình biết nhé!</h3>
+        <textarea id="feedback" placeholder="Nhập ý kiến của bạn..."></textarea>
+        <button onclick="submitFeedback()">Gửi</button>
+        <script>
+            function submitFeedback() {
+                let feedbackText = document.getElementById('feedback').value;
+                if (feedbackText.trim() === '') {
+                    alert('Vui lòng nhập ý kiến!');
+                    return;
+                }
+                let feedbackList = document.getElementById('feedback-list');
+                let feedbackItem = document.createElement('div');
+                feedbackItem.className = 'feedback-item';
+                feedbackItem.textContent = feedbackText;
+                feedbackList.prepend(feedbackItem);
+                document.getElementById('feedback').value = '';
+            }
+        </script>
+    </div>
 
     <footer>
         <p>&copy; 2025 TeaPU. 12/6 THPT Trần Phú. All Rights Reserved.</p>
